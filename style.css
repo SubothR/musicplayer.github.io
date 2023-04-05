@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    color: #fff;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px;
+}
+
+.col {
+    width: 100%;
+    background: rgb(18, 15, 18);
+    border-radius: 2vh;
+    cursor: pointer;
+    box-shadow: 0px 0px 0 rgb(55, 55, 55);
+    transition: 0.5s;
+}
+
+.col:hover {
+    padding: 5px;
+    box-shadow: 10px 5px 12px rgb(101, 212, 110);
+}
+
+.col img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 2vh;
+}
+
+.caption {
+    padding: 2.5px 3px 0 8px;
+}
+
+@media screen and (max-width:768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+    }
+    audio {
+        width: 80%;
+        height: 2vh;
+        color: rgb(101, 212, 110);
+        padding: 30px 0px 0px 2px;
+        justify-content: center;
+        float: left;
+    }
+}
+
+#nav {
+    box-shadow: 10px 5px 12px rgb(101, 212, 110);
+    position: sticky;
+    top: 0;
+    border-radius: 5vh;
+    padding: 10px;
+    margin: 10px
+}
+
+#nav_content {
+    column-gap: 2rem;
+    align-content: center;
+}
+
+.player {
+    width: 100%;
+    height: 12vh;
+    color: #fff;
+    /* background: linear-gradient(to left, rgb(184, 39, 64), rgb(203, 171, 61), rgb(13, 12, 52), rgb(217, 31, 62), rgb(228, 186, 46) 30%, rgb(17, 15, 67)); */
+    background: rgb(174, 42, 145);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 2vh 2vh 0 0;
+    box-shadow: 5px 5px 12px 10px rgb(101, 212, 110);
+    display: none;
+    transition: 0.8s;
+    animation: change 10s linear infinite;
+}
+
+
+/* @keyframes change {
+    1% {
+        background: linear-gradient(to left, #6caa4c, rgb(255, 17, 0), #784caa);
+    }
+    25% {
+        background: linear-gradient(to left, #27371f, rgb(69, 13, 9), #480298);
+    }
+    50% {
+        background: linear-gradient(to left, #ceebbf, rgb(255, 17, 0), #951052);
+    }
+    75% {
+        background: linear-gradient(to left, #4f7e37, rgb(20, 57, 171));
+    }
+    100% {
+        background: linear-gradient(to left, #40df02, rgb(255, 17, 0));
+    }
+} */
+
+audio {
+    width: 80%;
+    height: 3vh;
+    padding: 30px 0px 0px 20px;
+    justify-content: center;
+    float: left;
+    cursor: pointer;
+    display: block;
+    z-index: 20;
+}
+
+.title {
+    padding: 10px;
+}
